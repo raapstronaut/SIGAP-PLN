@@ -8,10 +8,10 @@ Repository ini **public untuk source code**, sedangkan **data operasional tetap 
 
 ### Yang dipublikasikan
 
-- `src/code.gs` — backend Google Apps Script dan akses data runtime.
-- `src/index.html` — antarmuka dashboard.
-- `src/ml_dashboard.gs` — logika analisis/ML dashboard.
-- `src/ml_action_alert.gs` — logika alert dan tindak lanjut.
+- `code.gs` — backend Google Apps Script dan akses data runtime.
+- `index.html` — antarmuka dashboard.
+- `ml_dashboard.gs` — logika analisis/ML dashboard.
+- `ml_action_alert.gs` — logika alert dan tindak lanjut.
 
 ### Yang tidak dipublikasikan
 
@@ -43,6 +43,8 @@ Google Spreadsheet (PRIVATE / INTERNAL)
 ## Catatan keamanan
 
 Repository public ini tidak dimaksudkan sebagai tempat penyimpanan data operasional. Jangan commit file spreadsheet produksi, export CSV, credential, token, atau konfigurasi privat. File `.gitignore` disediakan sebagai perlindungan tambahan, tetapi pemeriksaan manual sebelum commit tetap diperlukan.
+
+Versi aplikasi saat ini masih menggunakan autentikasi berbasis sheet `USERS`, dengan password yang dibandingkan di backend dan sesi frontend yang disimpan di browser. Mekanisme tersebut merupakan bagian dari rancangan aplikasi saat ini dan **bukan tempat untuk menyimpan credential produksi di repository**. Untuk deployment yang lebih sensitif, autentikasi sebaiknya diperkuat sebelum digunakan sebagai kontrol keamanan utama.
 
 ## Teknologi
 
