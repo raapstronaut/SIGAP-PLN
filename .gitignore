@@ -1,0 +1,19 @@
+# Internal operational data
+*.xlsx
+*.xls
+*.csv
+
+# Local/private configuration
+.env
+.env.*
+config.private.*
+credentials.*
+secrets.*
+
+# Apps Script local metadata
+.clasp.json
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
